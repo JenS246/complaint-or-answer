@@ -50,8 +50,8 @@ Repository: https://github.com/JenS246/complaint-or-answer
 4. **Answer:** A contractor raises release as New Matter.
 5. **Complaint:** An employee alleges unpaid wages under a written agreement.
 6. **Answer:** An employer admits work occurred but denies that wages remain unpaid.
-7. **Complaint:** A tenant demands return of a security deposit and damages.
-8. **Answer:** A landlord raises the statute of limitations as New Matter.
+7. **Complaint:** A restaurant alleges that a supplier delivered spoiled food in violation of the parties' written contract and requests damages.
+8. **Answer:** An auto repair shop raises the statute of limitations as New Matter.
 9. **Complaint:** A pedestrian alleges an untreated icy entrance caused a fall.
 10. **Answer:** A store responds that reasonable investigation left it without sufficient knowledge to admit or deny a medical-treatment allegation.
 11. **Complaint:** A delivery company alleges breach of a written contract and nonpayment.

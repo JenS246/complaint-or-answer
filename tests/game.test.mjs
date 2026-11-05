@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 
 const source = await readFile(new URL("../game.js", import.meta.url), "utf8");
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+const readme = await readFile(new URL("../README.md", import.meta.url), "utf8");
 
 const questionBlock = source.match(/const QUESTIONS = (\[[\s\S]*?\n\]);\n\nconst TOTAL_QUESTIONS/);
 assert.ok(questionBlock, "The question bank should be readable by the test.");
@@ -22,6 +23,31 @@ for (const [index, question] of questions.entries()) {
   assert.ok(question.prompt.endsWith("?"), `Question ${index + 1} should end as a question.`);
   assert.ok(question.explanation.length >= 45, `Question ${index + 1} needs a useful explanation.`);
 }
+
+const questionText = questions.map((question) => `${question.prompt} ${question.explanation}`).join(" ");
+assert.doesNotMatch(
+  questionText,
+  /landlord|tenant|security deposit|\brent\b|eviction/i,
+  "The question bank must not include landlord-tenant topics."
+);
+
+assert.match(
+  html,
+  /Read each situation\. Does it belong in a complaint or an answer\?/,
+  "The introduction should use the approved wording."
+);
+assert.doesNotMatch(
+  html,
+  /There are 15 questions\./,
+  "The introduction should not announce the question count."
+);
+assert.match(readme, /restaurant alleges that a supplier delivered spoiled food/i);
+assert.match(readme, /auto repair shop raises the statute of limitations/i);
+assert.doesNotMatch(
+  readme,
+  /tenant demands|landlord raises/i,
+  "The question review must reflect the replacements."
+);
 
 assert.match(html, /data-answer="Complaint"/);
 assert.match(html, /data-answer="Answer"/);

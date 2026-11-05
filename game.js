@@ -3,106 +3,91 @@ const QUESTIONS = [
     prompt:
       "A driver starts a lawsuit by alleging that another driver ran a red light and caused a collision. Which pleading contains that allegation?",
     answer: "Complaint",
-    explanation:
-      "The plaintiff uses a complaint to state the material facts supporting the claim."
+    explanation: "A complaint states the facts supporting the claim."
   },
   {
     prompt:
       "The driver who was sued admits that a collision occurred but denies running the red light. Which pleading contains that response?",
     answer: "Answer",
-    explanation:
-      "The defendant uses an answer to admit or deny the complaint's factual allegations."
+    explanation: "An answer admits or denies allegations in the complaint."
   },
   {
     prompt:
       "A homeowner sues a contractor and asks the court to award the cost of repairing a leaking roof. Which pleading contains that request for relief?",
     answer: "Complaint",
-    explanation:
-      "The complaint states the plaintiff's claim and the relief requested from the court."
+    explanation: "A request for damages or other relief belongs in the complaint."
   },
   {
     prompt:
       "The contractor responds that the homeowner already signed a valid release covering the roof claim. In Pennsylvania, which pleading includes that defense under New Matter?",
     answer: "Answer",
-    explanation:
-      "A release is an affirmative defense pleaded in a responsive pleading under the heading New Matter."
+    explanation: "Release is an affirmative defense pleaded under New Matter in the answer."
   },
   {
     prompt:
       "An employee begins a lawsuit by alleging that an employer failed to pay wages required by their written agreement. Which pleading states the employee's claim?",
     answer: "Complaint",
-    explanation:
-      "The plaintiff begins the claim by stating its material facts in the complaint."
+    explanation: "The allegations supporting the employee's claim belong in the complaint."
   },
   {
     prompt:
       "The employer responds to paragraph 8 by admitting the employee worked during the stated week but denying that any wages remain unpaid. Which pleading contains that paragraph-by-paragraph response?",
     answer: "Answer",
-    explanation:
-      "An answer responds to the complaint's averments and may admit part while denying the rest."
+    explanation: "An answer may admit part of an allegation and deny the rest."
   },
   {
     prompt:
-      "A tenant asks the court to order a landlord to return a security deposit and pay damages. Which pleading contains the tenant's demand?",
+      "A restaurant sues a supplier, alleging that the supplier delivered spoiled food in violation of the parties' written contract and asking for damages. Which pleading contains those allegations and the request for relief?",
     answer: "Complaint",
-    explanation:
-      "The plaintiff's request for damages or other relief belongs in the complaint."
+    explanation: "The contract allegations and request for damages belong in the complaint."
   },
   {
     prompt:
-      "The landlord responds that the tenant's claim was filed after the applicable limitations period expired. In Pennsylvania, which pleading raises that defense as New Matter?",
+      "A customer sues an auto repair shop for engine damage. The shop responds that the claim was filed after the applicable limitations period expired. Which pleading raises that defense as New Matter?",
     answer: "Answer",
-    explanation:
-      "The statute of limitations is an affirmative defense pleaded under New Matter in the answer."
+    explanation: "The statute of limitations is an affirmative defense pleaded under New Matter in the answer."
   },
   {
     prompt:
       "A pedestrian starts a personal-injury lawsuit by alleging that a store left an icy entrance untreated and that the condition caused a fall. Which pleading contains those allegations?",
     answer: "Complaint",
-    explanation:
-      "The complaint sets out the plaintiff's material facts supporting the personal-injury claim."
+    explanation: "The allegations supporting the injury claim belong in the complaint."
   },
   {
     prompt:
       "The store responds that, after a reasonable investigation, it lacks enough knowledge to admit or deny the pedestrian's allegation about medical treatment. Which pleading contains that response?",
     answer: "Answer",
-    explanation:
-      "An answer may state that reasonable investigation left the defendant without enough information to form a belief. Under Pennsylvania practice, that statement has the effect of a denial."
+    explanation: "This response belongs in the answer and has the effect of a denial under Pennsylvania practice."
   },
   {
     prompt:
       "A delivery company sues a customer, alleging that a written contract required payment of $4,200 and that the customer did not pay. Which pleading contains those allegations?",
     answer: "Complaint",
-    explanation:
-      "The plaintiff states the material facts supporting the contract claim in the complaint."
+    explanation: "The allegations supporting the contract claim belong in the complaint."
   },
   {
     prompt:
       "The customer responds that the $4,200 invoice was paid in full before the lawsuit began. In Pennsylvania, which pleading raises payment as New Matter?",
     answer: "Answer",
-    explanation:
-      "Payment is an affirmative defense pleaded under the heading New Matter in the answer."
+    explanation: "Payment is an affirmative defense pleaded under New Matter in the answer."
   },
   {
     prompt:
       "A property owner begins a lawsuit by alleging that a neighbor's excavation damaged a retaining wall and caused $12,000 in repair costs. Which pleading contains the owner's allegations and claimed damage?",
     answer: "Complaint",
-    explanation:
-      "The complaint states the facts supporting the claim and identifies the relief the plaintiff seeks."
+    explanation: "The allegations and claimed repair costs belong in the complaint."
   },
   {
     prompt:
       "The neighbor responds to the property-damage complaint by admitting that excavation occurred but denying that it caused the wall to crack. Which pleading contains that response?",
     answer: "Answer",
-    explanation:
-      "The defendant uses an answer to admit one allegation and deny another."
+    explanation: "An answer may admit one allegation and deny another."
   },
   {
     prompt:
       "A patient sues a clinic. The clinic responds that paragraph 12 correctly identifies the date of treatment, but it denies the paragraph's allegation that the treatment caused the injury. Which pleading contains the clinic's response?",
     answer: "Answer",
-    explanation:
-      "The answer must respond to the complaint's factual allegations and may admit part of a paragraph while denying the remainder."
+    explanation: "An answer may admit part of a paragraph and deny the rest."
   }
 ];
 
