@@ -58,12 +58,16 @@ assert.match(html, /COMPLAINT OR ANSWER\?/);
 assert.match(html, /CIVIL LITIGATION I/);
 assert.match(html, /Score: <span id="final-score">0 \/ 15<\/span>\./);
 assert.match(html, /Review Answers/);
+assert.match(source, /showScreen\("end"\);[\s\S]*?window\.scrollTo\(\{ top: 0, behavior: "auto" \}\);/);
 assert.doesNotMatch(
   html,
-  /C \/ A|WHICH PLEADING\?|ACTIVITY COMPLETE|ANSWER REVIEW|ALL 15 QUESTIONS|background-shapes|family-mark|card-mark/,
-  "Removed labels and decorative elements should not return."
+  /C \/ A|WHICH PLEADING\?|ACTIVITY COMPLETE|ANSWER REVIEW|ALL 15 QUESTIONS|family-mark|card-mark/,
+  "Removed decorative wording should not return."
 );
 assert.match(styles, /--page: #008c95;/);
-assert.doesNotMatch(styles, /#d7d8a7|#243036|background-shapes|shape-ring|shape-corner|family-mark|card-mark/);
+assert.match(html, /class="background-shapes" aria-hidden="true"/);
+assert.match(styles, /--yellow: #f4c34f;/);
+assert.match(styles, /--turquoise: #62d0cb;/);
+assert.doesNotMatch(styles, /#d7d8a7|#243036|family-mark|card-mark|linear-gradient|radial-gradient/);
 
 console.log(`Passed: ${questions.length} questions, two answer choices, review screen, and content checks.`);

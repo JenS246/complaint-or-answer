@@ -157,6 +157,7 @@ function startGame() {
   score = 0;
   showScreen("play");
   renderQuestion();
+  window.scrollTo({ top: 0, behavior: "auto" });
   ui.scenarioCard.focus();
 }
 
@@ -215,6 +216,7 @@ function nextQuestion() {
   ui.finalScore.textContent = `${score} / ${TOTAL_QUESTIONS}`;
   showScreen("end");
   document.querySelector("#end-title").setAttribute("tabindex", "-1");
+  window.scrollTo({ top: 0, behavior: "auto" });
   document.querySelector("#end-title").focus();
 }
 
@@ -254,6 +256,7 @@ ui.playAgainButton.addEventListener("click", startGame);
 ui.reviewButton.addEventListener("click", showReview);
 ui.backButton.addEventListener("click", () => {
   showScreen("end");
+  window.scrollTo({ top: 0, behavior: "auto" });
   ui.reviewButton.focus();
 });
 ui.nextButton.addEventListener("click", nextQuestion);

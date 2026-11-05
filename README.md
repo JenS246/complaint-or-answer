@@ -16,6 +16,10 @@ The questions use Pennsylvania pleading concepts, including allegations and requ
 
 The game uses plain HTML, CSS, and JavaScript. It has no external dependencies, accounts, analytics, or backend.
 
+Its visual system uses a vivid teal page, warm yellow and turquoise accents, navy outlines,
+cream cards, and simple CSS geometry. The styling follows the bold, tactile classroom-game
+language used across the related JenS246 activities while keeping this game visually distinct.
+
 ## Run locally
 
 Open `index.html` in a browser, or serve the directory with any static web server:
@@ -75,7 +79,7 @@ This activity is an introductory classroom exercise, not legal advice.
 ## Project files
 
 - `index.html`: page structure and accessible screen regions
-- `styles.css`: responsive presentation, focus states, and light/dark color tokens
+- `styles.css`: responsive presentation, accessible focus states, and the classroom-game palette
 - `game.js`: questions, scoring, feedback, keyboard controls, and review screen
 - `tests/game.test.mjs`: dependency-free content checks
 - `.github/workflows/pages.yml`: GitHub Pages deployment
