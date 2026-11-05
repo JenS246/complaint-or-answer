@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#d7d8a7" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#243036" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#008c95" />
     <meta
       name="description"
       content="A civil litigation practice game about complaints and answers in Pennsylvania."
@@ -15,16 +14,10 @@
     <script src="game.js" defer></script>
   </head>
   <body>
-    <div class="background-shapes" aria-hidden="true">
-      <span class="shape shape-ring"></span>
-      <span class="shape shape-corner"></span>
-    </div>
-
     <main class="game-shell" aria-labelledby="game-title">
       <header class="game-header">
         <div class="title-lockup">
-          <span class="family-mark" aria-hidden="true">C / A</span>
-          <h1 id="game-title">COMPLAINT <span>/</span> ANSWER</h1>
+          <h1 id="game-title">COMPLAINT OR ANSWER?</h1>
         </div>
 
         <div id="game-meta" class="game-meta" aria-label="Game progress" hidden>
@@ -36,22 +29,19 @@
         </div>
       </header>
 
-      <section id="intro-screen" class="intro-screen" aria-labelledby="intro-title">
+      <section id="intro-screen" class="intro-screen" aria-labelledby="game-title">
         <article class="intro-card">
           <p class="card-label">CIVIL LITIGATION I</p>
-          <h2 id="intro-title">Which pleading does it belong in?</h2>
           <p class="intro-copy">
             Read each situation. Does it belong in a complaint or an answer?
           </p>
-          <button id="start-button" class="primary-button" type="button">START</button>
+          <button id="start-button" class="primary-button" type="button">Start</button>
         </article>
       </section>
 
       <section id="play-screen" class="play-screen" aria-label="Current question" hidden>
         <article id="scenario-card" class="scenario-card" tabindex="-1">
-          <p class="card-label">WHICH PLEADING?</p>
           <h2 id="scenario-text" class="scenario-text"></h2>
-          <span class="card-mark" aria-hidden="true">?</span>
         </article>
 
         <div id="answers" class="answers" aria-label="Choose an answer">
@@ -75,8 +65,7 @@
       </section>
 
       <section id="end-screen" class="end-screen" aria-labelledby="end-title" hidden>
-        <p class="card-label">ACTIVITY COMPLETE</p>
-        <h2 id="end-title">YOU GOT <span id="final-score">0 / 15</span></h2>
+        <h2 id="end-title">Score: <span id="final-score">0 / 15</span>.</h2>
         <p class="takeaway">
           A complaint states the plaintiff's claims and requested relief. An answer responds to
           those allegations and may include New Matter.
@@ -89,10 +78,7 @@
 
       <section id="review-screen" class="review-screen" aria-labelledby="review-title" hidden>
         <div class="review-heading">
-          <div>
-            <p class="card-label">ANSWER REVIEW</p>
-            <h2 id="review-title" tabindex="-1">ALL 15 QUESTIONS</h2>
-          </div>
+          <h2 id="review-title" tabindex="-1">Review Answers</h2>
           <button id="back-button" class="secondary-button compact-button" type="button">BACK TO SCORE</button>
         </div>
         <ol id="review-list" class="review-list"></ol>

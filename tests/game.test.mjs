@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 
 const source = await readFile(new URL("../game.js", import.meta.url), "utf8");
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+const styles = await readFile(new URL("../styles.css", import.meta.url), "utf8");
 const readme = await readFile(new URL("../README.md", import.meta.url), "utf8");
 
 const questionBlock = source.match(/const QUESTIONS = (\[[\s\S]*?\n\]);\n\nconst TOTAL_QUESTIONS/);
@@ -53,5 +54,16 @@ assert.match(html, /data-answer="Complaint"/);
 assert.match(html, /data-answer="Answer"/);
 assert.match(html, /aria-live="polite"/);
 assert.match(html, /id="review-screen"/);
+assert.match(html, /COMPLAINT OR ANSWER\?/);
+assert.match(html, /CIVIL LITIGATION I/);
+assert.match(html, /Score: <span id="final-score">0 \/ 15<\/span>\./);
+assert.match(html, /Review Answers/);
+assert.doesNotMatch(
+  html,
+  /C \/ A|WHICH PLEADING\?|ACTIVITY COMPLETE|ANSWER REVIEW|ALL 15 QUESTIONS|background-shapes|family-mark|card-mark/,
+  "Removed labels and decorative elements should not return."
+);
+assert.match(styles, /--page: #008c95;/);
+assert.doesNotMatch(styles, /#d7d8a7|#243036|background-shapes|shape-ring|shape-corner|family-mark|card-mark/);
 
 console.log(`Passed: ${questions.length} questions, two answer choices, review screen, and content checks.`);
